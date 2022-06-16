@@ -12,6 +12,7 @@
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/sg_gallery.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/sg_gallery-binder.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/sg_gallery-dataframe.css" type="text/css" />
@@ -28,6 +29,7 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -97,17 +99,19 @@
 <li class="toctree-l3"><a class="reference internal" href="3d_perspective_image.html">Creating a 3D perspective image</a></li>
 <li class="toctree-l3"><a class="reference internal" href="contour_map.html">Creating a map with contour lines</a></li>
 <li class="toctree-l3"><a class="reference internal" href="subplots.html">Making subplots</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Performing grid histogram equalization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#load-sample-data">Load sample data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#plot-the-original-digital-elevation-model-and-data-distribution">Plot the original digital elevation model and data distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#equalize-grid-based-on-a-linear-distribution">Equalize grid based on a linear distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#calculate-the-bins-used-for-data-transformation">Calculate the bins used for data transformation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#plot-the-equally-distributed-data">Plot the equally distributed data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#transform-grid-based-on-a-normal-distribution">Transform grid based on a normal distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#plot-the-normally-distributed-data">Plot the normally distributed data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#equalize-grid-based-on-a-quadratic-distribution">Equalize grid based on a quadratic distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id1">Calculate the bins used for data transformation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#plot-the-quadratic-distribution-of-data">Plot the quadratic distribution of data</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Performing grid histogram equalization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#load-sample-data">Load sample data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plot-the-original-digital-elevation-model-and-data-distribution">Plot the original digital elevation model and data distribution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#equalize-grid-based-on-a-linear-distribution">Equalize grid based on a linear distribution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#calculate-the-bins-used-for-data-transformation">Calculate the bins used for data transformation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plot-the-equally-distributed-data">Plot the equally distributed data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transform-grid-based-on-a-normal-distribution">Transform grid based on a normal distribution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plot-the-normally-distributed-data">Plot the normally distributed data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#equalize-grid-based-on-a-quadratic-distribution">Equalize grid based on a quadratic distribution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Calculate the bins used for data transformation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plot-the-quadratic-distribution-of-data">Plot the quadratic distribution of data</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="earth_relief.html">Plotting Earth relief</a></li>
 <li class="toctree-l3"><a class="reference internal" href="date_time_charts.html">Plotting datetime charts</a></li>
 <li class="toctree-l3"><a class="reference internal" href="vectors.html">Plotting vectors</a></li>
@@ -198,9 +202,8 @@ statistics based on a cumulative distribution function.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pygmt</span>
 </pre></div>
 </div>
-</section>
 <section id="load-sample-data">
-<h1>Load sample data<a class="headerlink" href="#load-sample-data" title="Permalink to this headline"></a></h1>
+<h2>Load sample data<a class="headerlink" href="#load-sample-data" title="Permalink to this headline"></a></h2>
 <p>Load the sample Earth relief data for a region around Yosemite valley
 and use <a class="reference internal" href="../../api/generated/pygmt.grd2xyz.html#pygmt.grd2xyz" title="pygmt.grd2xyz"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.grd2xyz</span></code></a> to create a <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="(in pandas v1.4.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.Series</span></code></a> with the
 z values.</p>
@@ -212,7 +215,7 @@ z values.</p>
 </div>
 </section>
 <section id="plot-the-original-digital-elevation-model-and-data-distribution">
-<h1>Plot the original digital elevation model and data distribution<a class="headerlink" href="#plot-the-original-digital-elevation-model-and-data-distribution" title="Permalink to this headline"></a></h1>
+<h2>Plot the original digital elevation model and data distribution<a class="headerlink" href="#plot-the-original-digital-elevation-model-and-data-distribution" title="Permalink to this headline"></a></h2>
 <p>For comparison, we will create a map of the original digital elevation
 model and a histogram showing the distribution of elevation data values.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create an instance of the Figure class</span>
@@ -251,7 +254,7 @@ model and a histogram showing the distribution of elevation data values.</p>
 </div>
 </section>
 <section id="equalize-grid-based-on-a-linear-distribution">
-<h1>Equalize grid based on a linear distribution<a class="headerlink" href="#equalize-grid-based-on-a-linear-distribution" title="Permalink to this headline"></a></h1>
+<h2>Equalize grid based on a linear distribution<a class="headerlink" href="#equalize-grid-based-on-a-linear-distribution" title="Permalink to this headline"></a></h2>
 <p>The <a class="reference internal" href="../../api/generated/pygmt.grdhisteq.equalize_grid.html#pygmt.grdhisteq.equalize_grid" title="pygmt.grdhisteq.equalize_grid"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.grdhisteq.equalize_grid</span></code></a> method creates a new grid with the
 z-values representing the position of the original z-values in a given
 cumulative distribution. By default, it computes the position in a linear
@@ -265,7 +268,7 @@ for the new grid.</p>
 </div>
 </section>
 <section id="calculate-the-bins-used-for-data-transformation">
-<h1>Calculate the bins used for data transformation<a class="headerlink" href="#calculate-the-bins-used-for-data-transformation" title="Permalink to this headline"></a></h1>
+<h2>Calculate the bins used for data transformation<a class="headerlink" href="#calculate-the-bins-used-for-data-transformation" title="Permalink to this headline"></a></h2>
 <p>The <a class="reference internal" href="../../api/generated/pygmt.grdhisteq.compute_bins.html#pygmt.grdhisteq.compute_bins" title="pygmt.grdhisteq.compute_bins"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.grdhisteq.compute_bins</span></code></a> method reports statistics about the
 grid equalization. Here, we report the bins that would linearly divide the
 original data into 9 divisions with equal area. In our new grid produced by
@@ -357,7 +360,7 @@ the value 1, and so on.</p>
 <br />
 <br /></section>
 <section id="plot-the-equally-distributed-data">
-<h1>Plot the equally distributed data<a class="headerlink" href="#plot-the-equally-distributed-data" title="Permalink to this headline"></a></h1>
+<h2>Plot the equally distributed data<a class="headerlink" href="#plot-the-equally-distributed-data" title="Permalink to this headline"></a></h2>
 <p>Here we create a map showing the grid that has been transformed to
 have a linear distribution with nine divisions and a histogram of the data
 values.</p>
@@ -396,7 +399,7 @@ values.</p>
 </div>
 </section>
 <section id="transform-grid-based-on-a-normal-distribution">
-<h1>Transform grid based on a normal distribution<a class="headerlink" href="#transform-grid-based-on-a-normal-distribution" title="Permalink to this headline"></a></h1>
+<h2>Transform grid based on a normal distribution<a class="headerlink" href="#transform-grid-based-on-a-normal-distribution" title="Permalink to this headline"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">gaussian</span></code> parameter of <a class="reference internal" href="../../api/generated/pygmt.grdhisteq.equalize_grid.html#pygmt.grdhisteq.equalize_grid" title="pygmt.grdhisteq.equalize_grid"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.grdhisteq.equalize_grid</span></code></a> can be
 used to transform the z-values relative to their position in a normal
 distribution rather than a linear distribution. In this case, the output
@@ -407,7 +410,7 @@ data are continuous rather than discrete.</p>
 </div>
 </section>
 <section id="plot-the-normally-distributed-data">
-<h1>Plot the normally distributed data<a class="headerlink" href="#plot-the-normally-distributed-data" title="Permalink to this headline"></a></h1>
+<h2>Plot the normally distributed data<a class="headerlink" href="#plot-the-normally-distributed-data" title="Permalink to this headline"></a></h2>
 <p>Here we create a map showing the grid that has been transformed to have
 a normal distribution and a histogram of the data values.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create an instance of the Figure class</span>
@@ -445,7 +448,7 @@ a normal distribution and a histogram of the data values.</p>
 </div>
 </section>
 <section id="equalize-grid-based-on-a-quadratic-distribution">
-<h1>Equalize grid based on a quadratic distribution<a class="headerlink" href="#equalize-grid-based-on-a-quadratic-distribution" title="Permalink to this headline"></a></h1>
+<h2>Equalize grid based on a quadratic distribution<a class="headerlink" href="#equalize-grid-based-on-a-quadratic-distribution" title="Permalink to this headline"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">quadratic</span></code> parameter of <a class="reference internal" href="../../api/generated/pygmt.grdhisteq.equalize_grid.html#pygmt.grdhisteq.equalize_grid" title="pygmt.grdhisteq.equalize_grid"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.grdhisteq.equalize_grid</span></code></a> can be
 used to transform the z-values relative to their position in a quadratic
 distribution rather than a linear distribution. Here, we equalize the grid
@@ -459,7 +462,7 @@ into nine divisions based on a quadratic distribution and produce a
 </div>
 </section>
 <section id="id1">
-<h1>Calculate the bins used for data transformation<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h1>
+<h2>Calculate the bins used for data transformation<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
 <p>We can also use the <code class="docutils literal notranslate"><span class="pre">quadratic</span></code> parameter of
 <a class="reference internal" href="../../api/generated/pygmt.grdhisteq.compute_bins.html#pygmt.grdhisteq.compute_bins" title="pygmt.grdhisteq.compute_bins"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.grdhisteq.compute_bins</span></code></a> to report the bins used for dividing
 the grid into 9 divisions based on their position in a quadratic
@@ -548,7 +551,7 @@ distribution.</p>
 <br />
 <br /></section>
 <section id="plot-the-quadratic-distribution-of-data">
-<h1>Plot the quadratic distribution of data<a class="headerlink" href="#plot-the-quadratic-distribution-of-data" title="Permalink to this headline"></a></h1>
+<h2>Plot the quadratic distribution of data<a class="headerlink" href="#plot-the-quadratic-distribution-of-data" title="Permalink to this headline"></a></h2>
 <p>Here we create a map showing the grid that has been transformed to have
 a quadratic distribution and a histogram of the data values.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create an instance of the Figure class</span>
@@ -584,7 +587,7 @@ a quadratic distribution and a histogram of the data values.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;IPython.core.display.Image object&gt;
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  12.167 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  10.217 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorials-advanced-grid-equalization-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/bedffbc3da9c4faaf43127f3e1456200/grid_equalization.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">grid_equalization.py</span></code></a></p>
@@ -594,6 +597,7 @@ a quadratic distribution and a histogram of the data values.</p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</section>
 </section>
 
 
@@ -609,9 +613,9 @@ a quadratic distribution and a histogram of the data values.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2022, The PyGMT Developers.
-      <span class="commit">Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/f6190794">f6190794</a></code>.
+      <span class="commit">Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/9f9b7f61">9f9b7f61</a></code>.
       </span>
-      <span class="lastupdated">Last updated on Apr 11, 2022.
+      <span class="lastupdated">Last updated on Jun 16, 2022.
       </span></p>
   </div>
 

@@ -5,24 +5,24 @@
 
 Computation times
 =================
-**01:20.744** total execution time for **tutorials_advanced** files:
+**01:08.690** total execution time for **tutorials_advanced** files:
 
 +------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorials_advanced_vectors.py` (``vectors.py``)                           | 00:17.473 | 0.0 MB |
+| :ref:`sphx_glr_tutorials_advanced_vectors.py` (``vectors.py``)                           | 00:14.940 | 0.0 MB |
 +------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorials_advanced_grid_equalization.py` (``grid_equalization.py``)       | 00:12.167 | 0.0 MB |
+| :ref:`sphx_glr_tutorials_advanced_grid_equalization.py` (``grid_equalization.py``)       | 00:10.217 | 0.0 MB |
 +------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorials_advanced_date_time_charts.py` (``date_time_charts.py``)         | 00:10.744 | 0.0 MB |
+| :ref:`sphx_glr_tutorials_advanced_date_time_charts.py` (``date_time_charts.py``)         | 00:08.911 | 0.0 MB |
 +------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorials_advanced_contour_map.py` (``contour_map.py``)                   | 00:08.687 | 0.0 MB |
+| :ref:`sphx_glr_tutorials_advanced_contour_map.py` (``contour_map.py``)                   | 00:07.576 | 0.0 MB |
 +------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorials_advanced_subplots.py` (``subplots.py``)                         | 00:08.256 | 0.0 MB |
+| :ref:`sphx_glr_tutorials_advanced_subplots.py` (``subplots.py``)                         | 00:06.851 | 0.0 MB |
 +------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorials_advanced_earth_relief.py` (``earth_relief.py``)                 | 00:07.609 | 0.0 MB |
+| :ref:`sphx_glr_tutorials_advanced_earth_relief.py` (``earth_relief.py``)                 | 00:06.497 | 0.0 MB |
 +------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorials_advanced_insets.py` (``insets.py``)                             | 00:05.684 | 0.0 MB |
+| :ref:`sphx_glr_tutorials_advanced_3d_perspective_image.py` (``3d_perspective_image.py``) | 00:04.960 | 0.0 MB |
 +------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorials_advanced_3d_perspective_image.py` (``3d_perspective_image.py``) | 00:05.656 | 0.0 MB |
+| :ref:`sphx_glr_tutorials_advanced_insets.py` (``insets.py``)                             | 00:04.828 | 0.0 MB |
 +------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorials_advanced_configuration.py` (``configuration.py``)               | 00:04.467 | 0.0 MB |
+| :ref:`sphx_glr_tutorials_advanced_configuration.py` (``configuration.py``)               | 00:03.909 | 0.0 MB |
 +------------------------------------------------------------------------------------------+-----------+--------+

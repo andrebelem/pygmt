@@ -12,6 +12,7 @@
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
       <link rel="stylesheet" href="_static/sg_gallery.css" type="text/css" />
       <link rel="stylesheet" href="_static/sg_gallery-binder.css" type="text/css" />
       <link rel="stylesheet" href="_static/sg_gallery-dataframe.css" type="text/css" />
@@ -28,6 +29,7 @@
         <script src="_static/doctools.js"></script>
         <script src="_static/clipboard.min.js"></script>
         <script src="_static/copybutton.js"></script>
+        <script src="_static/design-tabs.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -133,6 +135,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#pygmt-documentation-overview">PyGMT Documentation Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#editing-the-documentation-on-github">Editing the Documentation on GitHub</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#editing-the-documentation-locally">Editing the Documentation Locally</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-example-code">Adding example code</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#contributing-gallery-plots">Contributing Gallery Plots</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#contributing-tutorials">Contributing Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#editing-the-api-documentation">Editing the API Documentation</a></li>
@@ -317,7 +320,7 @@ where you can submit general comments and/or questions:</p>
 <section id="resources-for-new-contributors">
 <h3>Resources for New Contributors<a class="headerlink" href="#resources-for-new-contributors" title="Permalink to this headline"></a></h3>
 <p>Please take a look at these resources to learn about Git and pull requests (don’t
-hesitate to <a class="reference internal" href="#getting-help"><span class="std std-ref">ask questions</span></a>):</p>
+hesitate to <a class="reference internal" href="#getting-help"><span class="std std-doc">ask questions</span></a>):</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://opensource.guide/how-to-contribute/">How to Contribute to Open Source</a>.</p></li>
 <li><p><a class="reference external" href="http://www.asmeurer.com/git-workflow/">Git Workflow Tutorial</a> by Aaron Meurer.</p></li>
@@ -392,11 +395,11 @@ alternative implementation details.</p>
 <li><p>Write some documentation for your code (docstrings) and leave comments
 explaining the <em>reason</em> behind non-obvious things.</p></li>
 <li><p>Write tests for the code you wrote/modified if needed.
-Please refer to <a class="reference internal" href="#testing-your-code"><span class="std std-ref">Testing your code</span></a> or
-<a class="reference internal" href="#testing-plots"><span class="std std-ref">Testing plots</span></a>.</p></li>
+Please refer to <a class="reference internal" href="#testing-your-code"><span class="std std-doc">Testing your code</span></a> or
+<a class="reference internal" href="#testing-plots"><span class="std std-doc">Testing plots</span></a>.</p></li>
 <li><p>Include an example of new features in the gallery or tutorials.
-Please refer to <a class="reference internal" href="#contributing-gallery-plots"><span class="std std-ref">Gallery plots</span></a>
-or <a class="reference internal" href="#contributing-tutorials"><span class="std std-ref">Tutorials</span></a>.</p></li>
+Please refer to <a class="reference internal" href="#contributing-gallery-plots"><span class="std std-doc">Gallery plots</span></a>
+or <a class="reference internal" href="#contributing-tutorials"><span class="std std-doc">Tutorials</span></a>.</p></li>
 </ul>
 </li>
 <li><p>Have a good coding style</p>
@@ -404,7 +407,7 @@ or <a class="reference internal" href="#contributing-tutorials"><span class="std
 <li><p>Use readable code, as it is better than clever code (even with comments).</p></li>
 <li><p>Follow the <a class="reference external" href="http://pep8.org">PEP8</a> style guide for code and the
 <a class="reference external" href="https://numpydoc.readthedocs.io/en/latest/format.html">NumPy style guide</a>
-for docstrings. Please refer to <a class="reference internal" href="#code-style"><span class="std std-ref">Code style</span></a>.</p></li>
+for docstrings. Please refer to <a class="reference internal" href="#code-style"><span class="std std-doc">Code style</span></a>.</p></li>
 </ul>
 </li>
 </ul>
@@ -413,16 +416,16 @@ This includes running both the unit tests as well as code linters.
 GitHub will show the status of these checks on the pull request.
 Try to get them all passing (green).
 If you have any trouble, leave a comment in the PR or
-<a class="reference internal" href="#getting-help"><span class="std std-ref">get in touch</span></a>.</p>
+<a class="reference internal" href="#getting-help"><span class="std std-doc">get in touch</span></a>.</p>
 </section>
 </section>
 </section>
 <section id="setting-up-your-environment">
 <h2>Setting up your Environment<a class="headerlink" href="#setting-up-your-environment" title="Permalink to this headline"></a></h2>
 <p>These steps for setting up your environment are necessary for
-<a class="reference internal" href="#editing-the-documentation-locally"><span class="std std-ref">editing the documentation locally</span></a> and
-<a class="reference internal" href="#contributing-code"><span class="std std-ref">contributing code</span></a>. A local PyGMT development environment
-is not needed for <a class="reference internal" href="#editing-the-documentation-on-github"><span class="std std-ref">editing the documentation on GitHub</span></a>.</p>
+<a class="reference internal" href="#editing-the-documentation-locally"><span class="std std-doc">editing the documentation locally</span></a> and
+<a class="reference internal" href="#contributing-code"><span class="std std-doc">contributing code</span></a>. A local PyGMT development environment
+is not needed for <a class="reference internal" href="#editing-the-documentation-on-github"><span class="std std-doc">editing the documentation on GitHub</span></a>.</p>
 <p>We highly recommend using <a class="reference external" href="https://www.anaconda.com/download/">Anaconda</a> and the <code class="docutils literal notranslate"><span class="pre">conda</span></code>
 package manager to install and manage your Python packages.
 It will make your life a lot easier!</p>
@@ -483,23 +486,23 @@ and markdown <code class="docutils literal notranslate"><span class="pre">*.md</
 <a class="reference external" href="http://www.sphinx-doc.org/">Sphinx</a>. Please refer to
 <a class="reference external" href="https://docs.generic-mapping-tools.org/latest/devdocs/rst-cheatsheet.html">reStructuredText Cheatsheet</a>
 if you are new to reStructuredText. When contributing documentation, be sure to
-follow the general guidelines in the <a class="reference internal" href="#pull-request-workflow"><span class="std std-ref">pull request workflow</span></a>
+follow the general guidelines in the <a class="reference internal" href="#pull-request-workflow"><span class="std std-doc">pull request workflow</span></a>
 section.</p>
 <p>There are two primary ways to edit the PyGMT documentation:</p>
 <ul class="simple">
 <li><p>For simple documentation changes, you can easily
-<a class="reference internal" href="#editing-the-documentation-on-github"><span class="std std-ref">edit the documentation on GitHub</span></a>.
+<a class="reference internal" href="#editing-the-documentation-on-github"><span class="std std-doc">edit the documentation on GitHub</span></a>.
 This only requires you to have a GitHub account.</p></li>
 <li><p>For more complicated changes, you can
-<a class="reference internal" href="#editing-the-documentation-locally"><span class="std std-ref">edit the documentation locally</span></a>.
+<a class="reference internal" href="#editing-the-documentation-locally"><span class="std std-doc">edit the documentation locally</span></a>.
 In order to build the documentation locally, you first need to
-<a class="reference internal" href="#setting-up-your-environment"><span class="std std-ref">set up your environment</span></a>.</p></li>
+<a class="reference internal" href="#setting-up-your-environment"><span class="std std-doc">set up your environment</span></a>.</p></li>
 </ul>
 </section>
 <section id="editing-the-documentation-on-github">
 <h3>Editing the Documentation on GitHub<a class="headerlink" href="#editing-the-documentation-on-github" title="Permalink to this headline"></a></h3>
 <p>If you’re browsing the documentation and notice a typo or something that could be
-improved, please consider letting us know by <a class="reference internal" href="#reporting-a-bug"><span class="std std-ref">creating an issue</span></a> or
+improved, please consider letting us know by <a class="reference internal" href="#reporting-a-bug"><span class="std std-doc">creating an issue</span></a> or
 (even better) submitting a fix.</p>
 <p>You can submit fixes to the documentation pages completely online without having to
 download and install anything:</p>
@@ -525,14 +528,14 @@ them in if everything is OK.</p></li>
 <li><p>Done!</p></li>
 </ol>
 <p>Alternatively, you can make the changes offline to the files in the <code class="docutils literal notranslate"><span class="pre">doc</span></code> folder or the
-example scripts. See <a class="reference internal" href="#editing-the-documentation-locally"><span class="std std-ref">editing the documentation locally</span></a>
+example scripts. See <a class="reference internal" href="#editing-the-documentation-locally"><span class="std std-doc">editing the documentation locally</span></a>
 for instructions.</p>
 </section>
 <section id="editing-the-documentation-locally">
 <h3>Editing the Documentation Locally<a class="headerlink" href="#editing-the-documentation-locally" title="Permalink to this headline"></a></h3>
 <p>For more extensive changes, you can edit the documentation in your cloned repository
 and build the documentation to preview changes before submitting a pull request. First,
-follow the <a class="reference internal" href="#setting-up-your-environment"><span class="std std-ref">setting up your environment</span></a> instructions.
+follow the <a class="reference internal" href="#setting-up-your-environment"><span class="std std-doc">setting up your environment</span></a> instructions.
 After making your changes, you can build the HTML files from sources using:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> doc
 make all
@@ -540,7 +543,25 @@ make all
 </div>
 <p>This will build the HTML files in <code class="docutils literal notranslate"><span class="pre">doc/_build/html</span></code>.
 Open <code class="docutils literal notranslate"><span class="pre">doc/_build/html/index.html</span></code> in your browser to view the pages. Follow the
-<a class="reference internal" href="#pull-request-workflow"><span class="std std-ref">pull request workflow</span></a> to submit your changes for review.</p>
+<a class="reference internal" href="#pull-request-workflow"><span class="std std-doc">pull request workflow</span></a> to submit your changes for review.</p>
+</section>
+<section id="adding-example-code">
+<h3>Adding example code<a class="headerlink" href="#adding-example-code" title="Permalink to this headline"></a></h3>
+<p>Many of the PyGMT functions have example code in their documentation. To contribute an
+example, add an “Example” header and put the example code below it. Have all lines
+begin with <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code>.  To keep this example code from being run during testing, add the code
+<code class="docutils literal notranslate"><span class="pre">__doctest_skip__</span> <span class="pre">=</span> <span class="pre">[function</span> <span class="pre">name]</span></code> to the top of the module.</p>
+<p><strong>Inline code example</strong></p>
+<p>Below the import statements at the top of the file</p>
+<p><code class="docutils literal notranslate"><span class="pre">__doctest_skip__</span> <span class="pre">=</span> <span class="pre">[&quot;module_name&quot;]</span></code></p>
+<p>At the end of the function’s docstring</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Example
+-------
+&gt;&gt;&gt; import pygmt
+&gt;&gt;&gt; # Comment describing what is happening
+&gt;&gt;&gt; Code example
+</pre></div>
+</div>
 </section>
 <section id="contributing-gallery-plots">
 <h3>Contributing Gallery Plots<a class="headerlink" href="#contributing-gallery-plots" title="Permalink to this headline"></a></h3>
@@ -548,7 +569,7 @@ Open <code class="docutils literal notranslate"><span class="pre">doc/_build/htm
 <a class="reference external" href="https://sphinx-gallery.readthedocs.io/">sphinx-gallery</a>.
 The source files for the example gallery are <code class="docutils literal notranslate"><span class="pre">.py</span></code> scripts in <code class="docutils literal notranslate"><span class="pre">examples/gallery/</span></code> that
 generate one or more figures. They are executed automatically by sphinx-gallery when
-the <a class="reference internal" href="#editing-the-documentation-locally"><span class="std std-ref">documentation is built</span></a>. The output is gathered and
+the <a class="reference internal" href="#editing-the-documentation-locally"><span class="std std-doc">documentation is built</span></a>. The output is gathered and
 assembled into the gallery.</p>
 <p>You can <strong>add a new</strong> plot by placing a new <code class="docutils literal notranslate"><span class="pre">.py</span></code> file in one of the folders inside the
 <code class="docutils literal notranslate"><span class="pre">examples/gallery</span></code> folder of the repository. See the other examples to get an idea for the
@@ -667,7 +688,7 @@ function/class/module/method.</p>
 <h3>PyGMT Code Overview<a class="headerlink" href="#pygmt-code-overview" title="Permalink to this headline"></a></h3>
 <p>The source code for PyGMT is located in the <code class="docutils literal notranslate"><span class="pre">pygmt/</span></code> directory. When contributing
 code, be sure to follow the general guidelines in the
-<a class="reference internal" href="#pull-request-workflow"><span class="std std-ref">pull request workflow</span></a> section.</p>
+<a class="reference internal" href="#pull-request-workflow"><span class="std std-doc">pull request workflow</span></a> section.</p>
 </section>
 <section id="code-style">
 <h3>Code Style<a class="headerlink" href="#code-style" title="Permalink to this headline"></a></h3>
@@ -696,7 +717,7 @@ words bridged only by consonants, such as <code class="docutils literal notransl
 convention is not applied by the code checking tools, but the PyGMT maintainers
 will comment on any pull requests as needed.</p>
 <p>We also use <a class="reference external" href="http://flake8.pycqa.org/en/latest/">flake8</a> and
-<a class="reference external" href="https://www.pylint.org/">pylint</a> to check the quality of the code and quickly catch
+<a class="reference external" href="https://pylint.pycqa.org/">pylint</a> to check the quality of the code and quickly catch
 common errors.
 The <a class="reference external" href="https://github.com/GenericMappingTools/pygmt/blob/main/Makefile"><code class="docutils literal notranslate"><span class="pre">Makefile</span></code></a>
 contains rules for running both checks:</p>
@@ -888,9 +909,9 @@ Here’s an example:</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2022, The PyGMT Developers.
-      <span class="commit">Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/f6190794">f6190794</a></code>.
+      <span class="commit">Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/9f9b7f61">9f9b7f61</a></code>.
       </span>
-      <span class="lastupdated">Last updated on Apr 11, 2022.
+      <span class="lastupdated">Last updated on Jun 16, 2022.
       </span></p>
   </div>
 

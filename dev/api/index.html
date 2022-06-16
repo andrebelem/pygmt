@@ -12,6 +12,7 @@
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" type="text/css" />
       <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
       <link rel="stylesheet" href="../_static/sg_gallery-binder.css" type="text/css" />
       <link rel="stylesheet" href="../_static/sg_gallery-dataframe.css" type="text/css" />
@@ -28,6 +29,7 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -157,9 +159,11 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#data-processing">Data Processing</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#operations-on-tabular-data">Operations on tabular data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/pygmt.binstats.html">pygmt.binstats</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pygmt.blockmean.html">pygmt.blockmean</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pygmt.blockmedian.html">pygmt.blockmedian</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pygmt.blockmode.html">pygmt.blockmode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/pygmt.filter1d.html">pygmt.filter1d</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pygmt.nearneighbor.html">pygmt.nearneighbor</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pygmt.project.html">pygmt.project</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pygmt.select.html">pygmt.select</a></li>
@@ -174,6 +178,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#operations-on-raster-data">Operations on raster data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/pygmt.dimfilter.html">pygmt.dimfilter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pygmt.grd2xyz.html">pygmt.grd2xyz</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pygmt.grdclip.html">pygmt.grdclip</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/pygmt.grdcut.html">pygmt.grdcut</a></li>
@@ -543,14 +548,20 @@ package.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.blockmean.html#pygmt.blockmean" title="pygmt.blockmean"><code class="xref py py-obj docutils literal notranslate"><span class="pre">blockmean</span></code></a>([data, x, y, z, outfile, spacing, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.binstats.html#pygmt.binstats" title="pygmt.binstats"><code class="xref py py-obj docutils literal notranslate"><span class="pre">binstats</span></code></a>(data, *[, statistic, empty, ...])</p></td>
+<td><p>Bin spatial data and determine statistics per bin.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pygmt.blockmean.html#pygmt.blockmean" title="pygmt.blockmean"><code class="xref py py-obj docutils literal notranslate"><span class="pre">blockmean</span></code></a>([data, x, y, z, outfile, spacing, ...])</p></td>
 <td><p>Block average (x,y,z) data tables by mean estimation.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pygmt.blockmedian.html#pygmt.blockmedian" title="pygmt.blockmedian"><code class="xref py py-obj docutils literal notranslate"><span class="pre">blockmedian</span></code></a>([data, x, y, z, outfile, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.blockmedian.html#pygmt.blockmedian" title="pygmt.blockmedian"><code class="xref py py-obj docutils literal notranslate"><span class="pre">blockmedian</span></code></a>([data, x, y, z, outfile, ...])</p></td>
 <td><p>Block average (x,y,z) data tables by median estimation.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.blockmode.html#pygmt.blockmode" title="pygmt.blockmode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">blockmode</span></code></a>([data, x, y, z, outfile, spacing, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pygmt.blockmode.html#pygmt.blockmode" title="pygmt.blockmode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">blockmode</span></code></a>([data, x, y, z, outfile, spacing, ...])</p></td>
 <td><p>Block average (x,y,z) data tables by mode estimation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.filter1d.html#pygmt.filter1d" title="pygmt.filter1d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">filter1d</span></code></a>(data[, output_type, outfile, end, ...])</p></td>
+<td><p>Time domain filtering of 1-D data tables.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/pygmt.nearneighbor.html#pygmt.nearneighbor" title="pygmt.nearneighbor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nearneighbor</span></code></a>([data, x, y, z, empty, ...])</p></td>
 <td><p>Grid table data using a &quot;Nearest neighbor&quot; algorithm</p></td>
@@ -596,46 +607,49 @@ package.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.grd2xyz.html#pygmt.grd2xyz" title="pygmt.grd2xyz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grd2xyz</span></code></a>(grid[, output_type, outfile, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.dimfilter.html#pygmt.dimfilter" title="pygmt.dimfilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dimfilter</span></code></a>(grid, *[, distance, filter, ...])</p></td>
+<td><p>Filter a grid by dividing the filter circle.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pygmt.grd2xyz.html#pygmt.grd2xyz" title="pygmt.grd2xyz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grd2xyz</span></code></a>(grid[, output_type, outfile, ...])</p></td>
 <td><p>Convert grid to data table.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pygmt.grdclip.html#pygmt.grdclip" title="pygmt.grdclip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdclip</span></code></a>(grid, *[, outgrid, region, above, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.grdclip.html#pygmt.grdclip" title="pygmt.grdclip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdclip</span></code></a>(grid, *[, outgrid, region, above, ...])</p></td>
 <td><p>Sets values in a grid that meet certain criteria to a new value.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.grdcut.html#pygmt.grdcut" title="pygmt.grdcut"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdcut</span></code></a>(grid, *[, outgrid, region, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pygmt.grdcut.html#pygmt.grdcut" title="pygmt.grdcut"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdcut</span></code></a>(grid, *[, outgrid, region, ...])</p></td>
 <td><p>Extract subregion from a grid.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pygmt.grdfill.html#pygmt.grdfill" title="pygmt.grdfill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdfill</span></code></a>(grid, *[, mode, outgrid, region, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.grdfill.html#pygmt.grdfill" title="pygmt.grdfill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdfill</span></code></a>(grid, *[, mode, outgrid, region, ...])</p></td>
 <td><p>Fill blank areas from a grid file.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.grdfilter.html#pygmt.grdfilter" title="pygmt.grdfilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdfilter</span></code></a>(grid, *[, distance, filter, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pygmt.grdfilter.html#pygmt.grdfilter" title="pygmt.grdfilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdfilter</span></code></a>(grid, *[, distance, filter, ...])</p></td>
 <td><p>Filter a grid in the space (or time) domain.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pygmt.grdgradient.html#pygmt.grdgradient" title="pygmt.grdgradient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdgradient</span></code></a>(grid, *[, azimuth, direction, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.grdgradient.html#pygmt.grdgradient" title="pygmt.grdgradient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdgradient</span></code></a>(grid, *[, azimuth, direction, ...])</p></td>
 <td><p>Compute the directional derivative of the vector gradient of the data.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.grdhisteq.html#pygmt.grdhisteq" title="pygmt.grdhisteq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdhisteq</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pygmt.grdhisteq.html#pygmt.grdhisteq" title="pygmt.grdhisteq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdhisteq</span></code></a>()</p></td>
 <td><p>Perform histogram equalization for a grid.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pygmt.grdhisteq.equalize_grid.html#pygmt.grdhisteq.equalize_grid" title="pygmt.grdhisteq.equalize_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdhisteq.equalize_grid</span></code></a>(grid, *[, outgrid, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.grdhisteq.equalize_grid.html#pygmt.grdhisteq.equalize_grid" title="pygmt.grdhisteq.equalize_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdhisteq.equalize_grid</span></code></a>(grid, *[, outgrid, ...])</p></td>
 <td><p>Perform histogram equalization for a grid.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.grdhisteq.compute_bins.html#pygmt.grdhisteq.compute_bins" title="pygmt.grdhisteq.compute_bins"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdhisteq.compute_bins</span></code></a>(grid, *[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pygmt.grdhisteq.compute_bins.html#pygmt.grdhisteq.compute_bins" title="pygmt.grdhisteq.compute_bins"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdhisteq.compute_bins</span></code></a>(grid, *[, ...])</p></td>
 <td><p>Perform histogram equalization for a grid.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pygmt.grdlandmask.html#pygmt.grdlandmask" title="pygmt.grdlandmask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdlandmask</span></code></a>(*[, area_thresh, resolution, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.grdlandmask.html#pygmt.grdlandmask" title="pygmt.grdlandmask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdlandmask</span></code></a>(*[, area_thresh, resolution, ...])</p></td>
 <td><p>Create a grid file with set values for land and water.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.grdproject.html#pygmt.grdproject" title="pygmt.grdproject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdproject</span></code></a>(grid, *[, center, spacing, dpi, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pygmt.grdproject.html#pygmt.grdproject" title="pygmt.grdproject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdproject</span></code></a>(grid, *[, center, spacing, dpi, ...])</p></td>
 <td><p>Change projection of gridded data between geographical and rectangular.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pygmt.grdsample.html#pygmt.grdsample" title="pygmt.grdsample"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdsample</span></code></a>(grid, *[, outgrid, spacing, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.grdsample.html#pygmt.grdsample" title="pygmt.grdsample"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdsample</span></code></a>(grid, *[, outgrid, spacing, ...])</p></td>
 <td><p>Change the registration, spacing, or nodes in a grid file.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.grdtrack.html#pygmt.grdtrack" title="pygmt.grdtrack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdtrack</span></code></a>(points, grid[, newcolname, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pygmt.grdtrack.html#pygmt.grdtrack" title="pygmt.grdtrack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdtrack</span></code></a>(grid[, points, newcolname, ...])</p></td>
 <td><p>Sample grids at specified (x,y) locations.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pygmt.grdvolume.html#pygmt.grdvolume" title="pygmt.grdvolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdvolume</span></code></a>(grid[, output_type, outfile, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pygmt.grdvolume.html#pygmt.grdvolume" title="pygmt.grdvolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdvolume</span></code></a>(grid[, output_type, outfile, ...])</p></td>
 <td><p>Determine the volume between the surface of a grid and a plane.</p></td>
 </tr>
 </tbody>
@@ -931,9 +945,9 @@ conversion of Python variables to GMT virtual files:</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2022, The PyGMT Developers.
-      <span class="commit">Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/f6190794">f6190794</a></code>.
+      <span class="commit">Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/9f9b7f61">9f9b7f61</a></code>.
       </span>
-      <span class="lastupdated">Last updated on Apr 11, 2022.
+      <span class="lastupdated">Last updated on Jun 16, 2022.
       </span></p>
   </div>
 
